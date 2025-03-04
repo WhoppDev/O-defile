@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ca245517b5ba13e4295cf473d451488e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5439830959372676571}
   - component: {fileID: 2283936684616314278}
   - component: {fileID: 4529287225533166350}
+  - component: {fileID: 6506144614751047770}
   m_Layer: 0
   m_Name: Luz
   m_TagString: Untagged
@@ -145,7 +146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c0ffffa0ed908de489df98bdba9aafef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,6 +168,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6506144614751047770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386315892318742201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7875779950570674a91bf063b54cab56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeRotacao: 1
+  amplitude: 30
+  velocidadeCor: 1
 --- !u!1 &4366988206562072828
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,7 +214,7 @@ Transform:
   - {fileID: 1860873296906106654}
   - {fileID: 5439830959372676571}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7252943901721251327
 GameObject:

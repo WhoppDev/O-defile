@@ -3,17 +3,7 @@ guid: 5faff10c926165e46aa9e47669817e2c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Caixa
-    second: {fileID: 2800000, guid: d13a7767868e9384d9300ab5eaaa5811, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Car Texture 48
-    second: {fileID: 2800000, guid: 56bf08588adba1f4cb69b65df8faa9d1, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
