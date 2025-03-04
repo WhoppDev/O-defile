@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour
 {
     public int popularity = 5; // 0-10
     public float spawnInterval = 5.0f;
-    public GameObject npcPrefab; 
+    public GameObject[] npcPrefab; 
     public Transform carTransform; 
     public float npcSpawnRadius = 10.0f; 
 
@@ -30,19 +30,20 @@ public class NPCController : MonoBehaviour
 
     void SpawnNPC()
     {
-
-        int npcsToSpawn = Mathf.Clamp(popularity, 1, 10); 
+        int npcsToSpawn = Mathf.Clamp(popularity, 1, 10);
 
         for (int i = 0; i < npcsToSpawn; i++)
         {
-
             Vector3 spawnPosition = carTransform.position + Random.insideUnitSphere * npcSpawnRadius;
-            spawnPosition.y = carTransform.position.y; 
+            spawnPosition.y = carTransform.position.y;
 
-            GameObject npc = Instantiate(npcPrefab, spawnPosition, Quaternion.identity);
+            GameObject randomNpcPrefab = npcPrefab[Random.Range(0, npcPrefab.Length)];
+
+            GameObject npc = Instantiate(randomNpcPrefab, spawnPosition, Quaternion.identity);
             spawnedNpcs.Add(npc);
         }
     }
+
 
     public void EndJourney()
     {
