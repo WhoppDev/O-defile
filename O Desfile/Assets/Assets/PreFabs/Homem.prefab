@@ -1586,6 +1586,8 @@ MonoBehaviour:
   danceDistance: 5
   danceDuration: 2
   retreatDistance: 3
+  minDistanceFromCar: 2
+  npcSpacing: 2
 --- !u!1 &5196493543513150387
 GameObject:
   m_ObjectHideFlags: 0
