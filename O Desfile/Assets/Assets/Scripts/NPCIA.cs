@@ -109,14 +109,6 @@ public class NPCIA : MonoBehaviour
             Collider[] nearbyColliders = Physics.OverlapSphere(randomPosition, npcSpacing);
             positionFound = true;
 
-            foreach (Collider collider in nearbyColliders)
-            {
-                if (collider.CompareTag("NPC") && collider.gameObject != this.gameObject)
-                {
-                    positionFound = false;
-                    break;
-                }
-            }
 
             attempts++;
             if (attempts > 100)

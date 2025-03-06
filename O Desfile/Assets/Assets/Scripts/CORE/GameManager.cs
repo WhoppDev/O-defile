@@ -9,9 +9,20 @@ public class GameManager : MonoBehaviour
     public TMP_Text dinheiroPlayerHud;
 
 
+    private void Start()
+    {
+        dinheiroPlayerHud.text = dinheiroJogador.ToString();
+    }
+
     public void GanharDinheiro(float dinheiroGanho)
     {
         dinheiroJogador += dinheiroGanho;
+        dinheiroPlayerHud.text = dinheiroJogador.ToString();
+    }
+
+    public void GastarDinheiro(float dinheiroGanho)
+    {
+        dinheiroJogador -= dinheiroGanho;
         dinheiroPlayerHud.text = dinheiroJogador.ToString();
     }
 }

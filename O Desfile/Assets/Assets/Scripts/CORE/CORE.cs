@@ -6,7 +6,7 @@ public class CORE : MonoBehaviour
 {
     public static CORE instance;
 
-    [SerializeField] GameManager gameManager;
+    public GameManager gameManager;
 
     void Awake()
     {
