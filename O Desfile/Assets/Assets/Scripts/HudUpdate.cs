@@ -18,7 +18,6 @@ public class HudUpdate : MonoBehaviour
 
         if (carro == null)
         {
-            Debug.LogWarning("Nenhum CarroAlegorico encontrado!");
             return;
         }
 
@@ -31,6 +30,7 @@ public class HudUpdate : MonoBehaviour
         AtualizarPainel(areaIluminacao, "luz", painelIluminacao);
         AtualizarPainel(areaSeguranca, "seguranca", painelSegurança);
         AtualizarPainel(areaAtracoes, "atracao", painelAtracoes);
+        carro.AtualizarElementos();
     }
 
     void AtualizarPainel(Transform area, string tipo, GameObject painel)
@@ -60,9 +60,10 @@ public class HudUpdate : MonoBehaviour
 
                 temElemento = true;
             }
+
         }
 
-        painel.SetActive(temElemento); 
+        painel.SetActive(false); 
     }
 
 
@@ -98,7 +99,7 @@ public class HudUpdate : MonoBehaviour
         }
 
         AtualizarTextoBotao(elemento, textoBotao);
-        carro.AtualizarElementos(); // Atualiza atributos e interface
+        carro.AtualizarElementos();
     }
 
 }

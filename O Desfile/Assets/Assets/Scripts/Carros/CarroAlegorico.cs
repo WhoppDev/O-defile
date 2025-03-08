@@ -14,7 +14,6 @@ public class CarroAlegorico : MonoBehaviour
     private void Start()
     {
         elementos = FindObjectsOfType<CarroElementosController>();
-        AtualizarElementos();
     }
 
     public void AtualizarElementos()
@@ -40,7 +39,6 @@ public class CarroAlegorico : MonoBehaviour
             }
         }
 
-        // Atualiza a interface
         if (FindObjectOfType<PropriedadesControl>() != null)
         {
             FindObjectOfType<PropriedadesControl>().AtualizarBarras(this);

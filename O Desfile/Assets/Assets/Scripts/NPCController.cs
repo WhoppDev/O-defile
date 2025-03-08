@@ -16,6 +16,8 @@ public class NPCController : MonoBehaviour
 
     void Update()
     {
+        if (!CORE.instance.gameManager.gameStart) return;
+
         if (isSpawning)
         {
             timer += Time.deltaTime;
@@ -65,9 +67,5 @@ public class NPCController : MonoBehaviour
         }
 
         spawnedNpcs.Clear();
-
-        Debug.Log("Jornada finalizada!");
-        Debug.Log("Popularidade total: " + totalPopularity);
-        Debug.Log("Dinheiro gerado: " + totalMoney);
     }
 }

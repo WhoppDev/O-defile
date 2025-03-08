@@ -18,7 +18,7 @@ MonoBehaviour:
   impactoSeguranca: 0
   impactoBeleza: 5
   impactoVelocidade: -8
-  equipado: 1
+  equipado: 0
   som: 1
   luz: 0
   seguranca: 0

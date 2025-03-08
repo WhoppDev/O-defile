@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public float dinheiroJogador;
     public TMP_Text dinheiroPlayerHud;
 
+    public bool gameStart = false;
+
 
     private void Start()
     {
@@ -24,5 +26,10 @@ public class GameManager : MonoBehaviour
     {
         dinheiroJogador -= dinheiroGanho;
         dinheiroPlayerHud.text = dinheiroJogador.ToString();
+    }
+
+    public void GameStatus()
+    {
+        gameStart = !gameStart;
     }
 }

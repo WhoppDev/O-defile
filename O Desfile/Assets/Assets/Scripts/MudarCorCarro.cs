@@ -5,26 +5,43 @@ using UnityEngine.UI;
 
 public class MudarCorCarro : MonoBehaviour
 {
-    [SerializeField] Material material;
+    [SerializeField] GameObject[] carModelMaterial; // Array de GameObjects
     [SerializeField] Slider r;
     [SerializeField] Slider g;
     [SerializeField] Slider b;
 
     [SerializeField] Color color;
-    // Start is called before the first frame update
+    List<Material> materials = new List<Material>();
+
     void Start()
     {
-        
+        carModelMaterial = GameObject.FindGameObjectsWithTag("CorCaro");
+
+        if (carModelMaterial.Length == 0)
+        {
+            return;
+        }
+
+        foreach (var model in carModelMaterial)
+        {
+            Renderer renderer = model.GetComponent<Renderer>();
+            if (renderer != null)
+            {
+                materials.Add(renderer.material); 
+            }
+
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (materials.Count == 0) return;
+
         color = new Color(r.value, g.value, b.value);
 
-        material.color = color;
-
-        Debug.Log(r.value);
+        foreach (var mat in materials)
+        {
+            mat.color = color;
+        }
     }
 }

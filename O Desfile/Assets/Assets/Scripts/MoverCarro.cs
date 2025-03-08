@@ -15,6 +15,7 @@ public class MoverCarro : MonoBehaviour
 
     void Update()
     {
+        if (!CORE.instance.gameManager.gameStart) return;
         float moveDistance = speed * Time.deltaTime;
         transform.Translate(Vector3.right * moveDistance);
 
