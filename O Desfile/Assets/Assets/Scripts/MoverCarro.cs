@@ -6,7 +6,10 @@ public class MoverCarro : MonoBehaviour
 {
     public float speed = 5f;
     private Vector3 startPosition;
-    private float distanceTraveled = 0f;
+    public float distanceTraveled = 0f;
+    [SerializeField] private float momentoGanharDinheiro = 10f;
+    [SerializeField] CarroAlegorico carroAlegorico;
+    [SerializeField] GameManager gameManager;
 
     void Start()
     {
@@ -21,6 +24,14 @@ public class MoverCarro : MonoBehaviour
 
         distanceTraveled = Vector3.Distance(startPosition, transform.position);
 
-        Debug.Log("Distância percorrida: " + distanceTraveled.ToString("F2") + " metros");
+        //Debug.Log("Distï¿½ncia percorrida: " + distanceTraveled.ToString("F2") + " metros");
+
+        if(distanceTraveled >= momentoGanharDinheiro) {
+
+            gameManager.dinheiroJogador += carroAlegorico.dinheiroGanho;
+            Debug.Log("Ganha " + carroAlegorico.dinheiroGanho + " dinheiros");
+            momentoGanharDinheiro += 10f;
+
+        }
     }
 }

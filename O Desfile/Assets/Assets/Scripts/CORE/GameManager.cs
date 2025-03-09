@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
 
     public bool gameStart = false;
 
+    void Awake()
+    {
+        gameStart = false;
+    }
 
     private void Start()
     {

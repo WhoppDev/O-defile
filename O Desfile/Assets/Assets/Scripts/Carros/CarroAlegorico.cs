@@ -11,9 +11,18 @@ public class CarroAlegorico : MonoBehaviour
     public float belezaTotal;
     public float velocidadeTotal;
 
+    public float dinheiroGanho;
+    public float multiplicadorDinheiro;
+
     private void Start()
     {
         elementos = FindObjectsOfType<CarroElementosController>();
+    }
+
+    void Update()
+    {
+        //o jogador ganha dinheiro ao depende da popularidade, seguranca e beleza do carro
+        dinheiroGanho = (popularidadeTotal + segurancaTotal + belezaTotal) * multiplicadorDinheiro;
     }
 
     public void AtualizarElementos()
